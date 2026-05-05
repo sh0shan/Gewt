@@ -14,11 +14,11 @@ export default function Footer() {
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
             <Image
-              src="/logo.png"
+              src="/logo-white.png"
               alt={t("site.name")}
-              width={160}
+              width={200}
               height={104}
-              className="h-14 w-auto"
+              className="h-16 w-auto"
             />
           </div>
           <p className="mt-6 max-w-md text-sm leading-6 text-slate-400">
