@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Belt-and-suspenders fallback: if the Next.js runtime can't process the
+# proxy.ts rename in Next.js 16, this Netlify-level redirect still sends
+# the root to the default locale.
+[[redirects]]
+  from = "/"
+  to = "/en"
+  status = 302
+  force = false

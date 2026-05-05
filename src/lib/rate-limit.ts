@@ -1,0 +1,24 @@
+type Bucket = { count: number; resetAt: number };
+
+const buckets = new Map<string, Bucket>();
+
+const WINDOW_MS = 10 * 60 * 1000;
+const MAX_REQUESTS = 5;
+
+export function checkRateLimit(key: string): { ok: boolean; remaining: number } {
+  const now = Date.now();
+  const bucket = buckets.get(key);
+  if (!bucket || bucket.resetAt < now) {
+    buckets.set(key, { count: 1, resetAt: now + WINDOW_MS });
+    return { ok: true, remaining: MAX_REQUESTS - 1 };
+  }
+  if (bucket.count >= MAX_REQUESTS) {
+    return { ok: false, remaining: 0 };
+  }
+  bucket.count += 1;
+  return { ok: true, remaining: MAX_REQUESTS - bucket.count };
+}
+
+export function _resetForTesting() {
+  buckets.clear();
+}

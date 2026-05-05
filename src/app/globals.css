@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #1c2330;
+  --cobalt: #3a4a63;
+  --steel: #5b6573;
+  --mist: #d6dae0;
+  --paper: #f7f8f9;
+  --background: #ffffff;
+  --foreground: #1c2330;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-cobalt: var(--cobalt);
+  --color-steel: var(--steel);
+  --color-mist: var(--mist);
+  --color-paper: var(--paper);
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-fraunces);
+  --font-mono: var(--font-geist-mono);
+  --font-arabic-serif: var(--font-naskh);
+  --font-arabic-sans: var(--font-noto-sans-arabic);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-image: url('/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: var(--paper);
+}
+
+html[lang="ar"] body {
+  font-family: var(--font-arabic-sans), "Geeza Pro", "Helvetica Neue", system-ui, sans-serif;
+}
+
+/* Arabic is cursive — any letter-spacing breaks the glyph joins
+   and renders text as disconnected letters (especially obvious on
+   iOS Safari). Strip tracking from every element under html[lang=ar]. */
+html[lang="ar"],
+html[lang="ar"] * {
+  letter-spacing: 0 !important;
+}
+
+.font-display {
+  font-family: var(--font-serif), Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+html[lang="ar"] .font-display {
+  font-family: var(--font-arabic-serif), "Geeza Pro", Georgia, serif;
+}
+
+.photo-tint {
+  filter: saturate(0.9) hue-rotate(-3deg);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: transform, opacity;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html { scroll-behavior: auto; }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 22s linear infinite; }
+
+html[dir="rtl"] .animate-marquee {
+  animation-direction: reverse;
+}
