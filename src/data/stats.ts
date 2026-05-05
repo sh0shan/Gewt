@@ -4,8 +4,8 @@ export type Stat = {
 };
 
 export const stats: Stat[] = [
-  { value: "30+", labelKey: "yearsExperience" },
-  { value: "<10%", labelKey: "qaDeviation" },
-  { value: "5", labelKey: "serviceDomains" },
-  { value: "IAEA", labelKey: "iaeaAligned" },
+  { value: "15+", labelKey: "yearsExperience" },
+  { value: "Local", labelKey: "qaDeviation" },
+  { value: "6", labelKey: "serviceDomains" },
+  { value: "GCC", labelKey: "iaeaAligned" },
 ];

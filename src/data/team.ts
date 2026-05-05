@@ -8,52 +8,35 @@ export type TeamMember = {
   photo: string;
 };
 
+// Placeholder roster — replace names, roles, bios, and photos before launch.
 export const team: TeamMember[] = [
   {
-    key: "abdulaziz-al-naimi",
-    name: {
-      en: "Abdulaziz Al-Naimi",
-      ar: "عبدالعزيز النعيمي",
-    },
-    role: {
-      en: "Chief Technology Officer",
-      ar: "الرئيس التنفيذي للتقنية",
-    },
+    key: "chair",
+    name: { en: "Board Chair", ar: "رئيس مجلس الإدارة" },
+    role: { en: "Board · Chair", ar: "مجلس الإدارة · الرئيس" },
     bio: {
-      en: "Leads technical operations and field execution. Decades of experience in NORM measurement, QA, and IAEA-aligned methodology in Qatar.",
-      ar: "يقود العمليات التقنية والتنفيذ الميداني. خبرة عقود في قياس المواد المشعّة الطبيعية، وضمان الجودة، والمنهجية المتوافقة مع IAEA في قطر.",
+      en: "Strategic leadership for GEWT's water engineering and manufacturing programmes.",
+      ar: "قيادة استراتيجية لبرامج هندسة المياه والتصنيع في غرين إنرجي.",
     },
     photo: "/abdulaziz.webp",
   },
   {
-    key: "david-bradley",
-    name: {
-      en: "Dr. David Bradley",
-      ar: "د. ديفيد برادلي",
-    },
-    role: {
-      en: "Board · Scientific Advisor",
-      ar: "مجلس الإدارة · مستشار علمي",
-    },
+    key: "ceo",
+    name: { en: "Chief Executive", ar: "الرئيس التنفيذي" },
+    role: { en: "Executive · CEO", ar: "تنفيذي · الرئيس التنفيذي" },
     bio: {
-      en: "Internationally recognised authority in radiation physics. Brings academic rigour to AlphaNorm's protocols and QA framework.",
-      ar: "مرجع دولي في فيزياء الإشعاع. يُضفي صرامةً أكاديمية على بروتوكولات ألفانورم وإطار ضمان الجودة لديها.",
+      en: "Operational lead across project delivery, supply, and long-term plant operations.",
+      ar: "قيادة تشغيلية تشمل تسليم المشاريع والتوريد وتشغيل المحطّات طويل الأمد.",
     },
     photo: "/david-bradley.webp",
   },
   {
-    key: "huda-al-sulaiti",
-    name: {
-      en: "Dr. Huda Al-Sulaiti",
-      ar: "د. هدى السليطي",
-    },
-    role: {
-      en: "Board · Strategic Advisor",
-      ar: "مجلس الإدارة · مستشارة استراتيجية",
-    },
+    key: "cto",
+    name: { en: "Chief Technology Officer", ar: "الرئيس التنفيذي للتقنية" },
+    role: { en: "Executive · CTO", ar: "تنفيذي · الرئيس التنفيذي للتقنية" },
     bio: {
-      en: "Senior researcher in environmental radioactivity. Bridges regional regulatory frameworks with international best practice.",
-      ar: "باحثة في النشاط الإشعاعي البيئي. تَجسر بين الأطر التنظيمية الإقليمية وأفضل الممارسات الدولية.",
+      en: "Technical lead for membrane manufacturing, process design, and the QA framework.",
+      ar: "قيادة تقنية لتصنيع الأغشية وتصميم العمليات وإطار ضمان الجودة.",
     },
     photo: "/huda.webp",
   },

@@ -13,23 +13,20 @@ export const industries: Industry[] = [
     photo: "/oil-gas.webp",
   },
   {
-    key: "industrial-waste",
-    label: { en: "Industrial Waste", ar: "النفايات الصناعية" },
+    key: "municipal",
+    label: { en: "Municipal Utilities", ar: "المرافق البلدية" },
     photo: "/waste.webp",
   },
   {
-    key: "environmental-authorities",
-    label: {
-      en: "Environmental Authorities",
-      ar: "الجهات البيئية",
-    },
+    key: "industrial",
+    label: { en: "Industrial Process Water", ar: "المياه الصناعية" },
     photo: "/authorities.webp",
   },
   {
-    key: "regulatory-research",
+    key: "high-purity",
     label: {
-      en: "Regulatory & Research",
-      ar: "القطاع التنظيمي والبحثي",
+      en: "Healthcare & Laboratories",
+      ar: "الرعاية الصحية والمختبرات",
     },
     photo: "/regulatory.webp",
   },
